@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sampleapiv2-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sampleapiv2
+  template:
+    metadata:
+      labels:
+        app: sampleapiv2
+    spec:
+      containers:
+      - image: cetetorunu/dogusteknolojik8strainingtestapi:v2
+        name: sampleapiv2
+        ports:
+        - containerPort: 80

@@ -1,0 +1,31 @@
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: my-metrics-exporter
+spec:
+  scaleTargetRef:
+    apiVersion: v1
+    kind: Deployment
+    name: my-metrics-exporter
+  minReplicas: 1
+  maxReplicas: 10
+  behavior:
+    scaleDown:
+      stabilizationWindowSeconds: 60
+      policies:
+      - type: Pods
+        value: 1
+        periodSeconds: 20
+  metrics:
+  - type: Object
+    object:
+      metric:
+        name: instance
+      describedObject:
+        apiVersion: v1
+        kind: Service
+        name: my-metrics-exporter
+      target:
+        type: Value
+        value: 5
+

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31727.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "K8sTestAPI", "K8sTestAPI\K8sTestAPI.csproj", "{CE5111AF-6A19-4F0F-9CA1-04CE491DF8B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s-custom-metrics-exporter-hpa-main", "k8s-custom-metrics-exporter-hpa-main", "{FDB22372-A486-4FEA-BF61-5DFAC8E2FCAA}"
+	ProjectSection(SolutionItems) = preProject
+		k8s-custom-metrics-exporter-hpa-main\.gitignore = k8s-custom-metrics-exporter-hpa-main\.gitignore
+		k8s-custom-metrics-exporter-hpa-main\readme.md = k8s-custom-metrics-exporter-hpa-main\readme.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "metrics-server", "metrics-server", "{AC9E9F00-4AE5-49F2-AB8D-FED3761390C2}"
+	ProjectSection(SolutionItems) = preProject
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\.dockerignore = k8s-custom-metrics-exporter-hpa-main\metrics-server\.dockerignore
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\Dockerfile = k8s-custom-metrics-exporter-hpa-main\metrics-server\Dockerfile
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\package-lock.json = k8s-custom-metrics-exporter-hpa-main\metrics-server\package-lock.json
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\package.json = k8s-custom-metrics-exporter-hpa-main\metrics-server\package.json
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\server.cert = k8s-custom-metrics-exporter-hpa-main\metrics-server\server.cert
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\server.js = k8s-custom-metrics-exporter-hpa-main\metrics-server\server.js
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\server.key = k8s-custom-metrics-exporter-hpa-main\metrics-server\server.key
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "manifests", "manifests", "{FE519B1B-0D6F-4375-8A57-356D660C164E}"
+	ProjectSection(SolutionItems) = preProject
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\apiservice.yaml = k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\apiservice.yaml
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\components.yaml = k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\components.yaml
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\deployment.yaml = k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\deployment.yaml
+		k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\hpa.yaml = k8s-custom-metrics-exporter-hpa-main\metrics-server\manifests\hpa.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE5111AF-6A19-4F0F-9CA1-04CE491DF8B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE5111AF-6A19-4F0F-9CA1-04CE491DF8B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE5111AF-6A19-4F0F-9CA1-04CE491DF8B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE5111AF-6A19-4F0F-9CA1-04CE491DF8B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AC9E9F00-4AE5-49F2-AB8D-FED3761390C2} = {FDB22372-A486-4FEA-BF61-5DFAC8E2FCAA}
+		{FE519B1B-0D6F-4375-8A57-356D660C164E} = {AC9E9F00-4AE5-49F2-AB8D-FED3761390C2}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {94B3F40D-9091-4F8E-9A9B-D3FEE6C43799}
+	EndGlobalSection
+EndGlobal

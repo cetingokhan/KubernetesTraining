@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: backendapi
+  labels:
+    app: sampleapiv2
+    tier: backendapi
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      tier: backendapi
+    matchExpressions:
+      - {key: tier, operator: In, values: [backendapi]} 
+  template: 
+    metadata:
+      labels:
+        app: sampleapiv2
+        tier: backendapi
+    spec:
+      containers:
+      - name: sampleapiv2
+        image: cetetorunu/dogusteknolojik8strainingtestapi:latest

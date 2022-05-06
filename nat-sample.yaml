@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingresssample
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: pre.cl1.k8s.gigantic.io
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-backendapi
+            port:
+              number: 65001
