@@ -1,1 +1,49 @@
+
+# Compiled binary addons (https://nodejs.org/api/addons.html)
+build/Release
+
+
+
+# dotenv environment variables file
+.env
+
+# JetBrains Rider
+.idea/
+*.sln.iml
+
 .DS_Store
+
+**/bin
+**/obj
+**/dist
+**Logs*.txt
+**/Logs
+**/logs
+**/Log
+**/log
+**/mongo-volume
+
+.vs
+
+**/.vs
+**/.vscode
+
+.DS_Store
+node_modules
+/dist
+
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj.user
+*.sw?
+*.csproj.user
+*.dcproj.user
+*.njsproj.user
+*.prettierrc
+*.DotSettings.user
+*.dotsettings.user
+src/ClientApplication/DExpert.Client/debug.log
