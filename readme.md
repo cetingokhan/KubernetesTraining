@@ -73,6 +73,8 @@ kubectl proxy --port=65001
 
 curl -k http://127.0.0.1:65001/api/v1/namespaces/default/services/my-backendapi/proxy/test
 
+docker exec -it <dockerid> bash
+
 curl -k 10.96.2.210:65001/test
 
 kubectl scale rs/mybackendapi -replicas=4

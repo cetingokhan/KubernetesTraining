@@ -13,7 +13,7 @@ spec:
         app: sampleapiv2
     spec:
       containers:
-      - image: cetetorunu/dogusteknolojik8strainingtestapi:v2
+      - image: cetetorunu/dogusteknolojik8strainingtestapi:v1
         name: sampleapiv2
         ports:
         - containerPort: 80
