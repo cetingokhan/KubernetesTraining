@@ -71,7 +71,7 @@ kubectl --namespace=dogustek-ns get pods
 
 kubectl proxy --port=65001
 
-curl -k http://127.0.0.1:65001/api/v1/namespaces/default/services/my-backendapi/proxy/test
+curl -k http://127.0.0.1:65001/api/v1/namespaces/dogustek-ns/services/my-backendapi/proxy/test
 
 docker exec -it <dockerid> bash
 
