@@ -77,7 +77,7 @@ docker exec -it <dockerid> bash
 
 curl -k 10.96.2.210:65001/test
 
-kubectl scale rs/mybackendapi -replicas=4
+kubectl scale rs/backendapi -replicas=4
 
 kubectl --namespace=dogustek-ns get pods
 
